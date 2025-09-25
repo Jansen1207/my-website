@@ -17,6 +17,7 @@ if (!$bootedCookie && !$fromBoot) {
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body class="desktop">
+  <div id="page-fader" aria-hidden="true"></div>
   <div class="wallpaper"></div>
 
 
@@ -77,6 +78,14 @@ if (!$bootedCookie && !$fromBoot) {
 <audio id="click-sound" src="sfx/click.mp3" preload="auto">
   </audio>
   <script src="js/click-sound.js"></script>
+
+<!-- bg -->
+<canvas id="snow-canvas"></canvas>
+<script src="js/snow.js"></script>
+<script src="js/transition.js"></script>
+
+
+
 
 </body>
 </html>
