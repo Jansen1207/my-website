@@ -1,0 +1,208 @@
+/* Base */
+*{ box-sizing:border-box }
+html,body{ height:100% }
+body{ margin:0; font-family: "Cinzel", serif; color:#e8eef9 }
+
+/* === Desktop screen (index.php) === */
+body.desktop{
+  background: radial-gradient(1400px 700px at 70% 5%, #101826, #0a1118 60%, #070b10);
+  min-height:100dvh;
+  display:flex; align-items:center; justify-content:center;
+  padding:24px;
+}
+.wallpaper{
+  position:fixed; inset:0; pointer-events:none;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.02), transparent 40%),
+    repeating-linear-gradient(120deg, rgba(255,255,255,.02) 0 1px, transparent 1px 10px);
+}
+
+/* Wider, responsive dock bar */
+/* Dock panel */
+.desktop-grid{
+  width: clamp(320px, 85vw, 1200px);
+
+  /* Taller height so icons have more breathing room */
+  height: clamp(240px, 45vh, 360px);
+
+  margin: 0 auto;
+  position: relative;                  /* drag context */
+  overflow: hidden;                    /* keep dragged icons inside */
+  user-select: none;
+  -webkit-user-select: none;
+  padding: clamp(32px, 6vh, 64px) clamp(24px, 5vw, 48px);  /* more padding top/bottom */
+  box-sizing: border-box;
+
+  display: flex;
+  flex-wrap: wrap;                     /* wrap on small screens */
+  justify-content: center;
+  align-items: center;
+  gap: clamp(28px, 4vw, 48px);
+
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 16px;
+  backdrop-filter: blur(2px);
+  box-shadow: 0 10px 30px rgba(0,0,0,.25),
+              inset 0 1px 0 rgba(255,255,255,.06);
+}
+
+
+/* Subtle lift while any icon is dragging (supported browsers) */
+.desktop-grid:has(.dragging){
+  box-shadow: 0 16px 40px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.08);
+  cursor: grabbing;
+}
+
+/* Icon block */
+.icon{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 6px;
+  cursor: grab;                        /* desktop pointer feedback */
+  touch-action: manipulation;          /* snappy taps on iOS */
+  transform: translateZ(0);            /* smoother transforms */
+}
+
+/* While mouse is down or dragging */
+.icon:active,
+.icon.dragging{ cursor: grabbing; }
+
+/* Dragging state visuals */
+.icon.dragging{
+  opacity: .92;
+  transform: scale(1.12);              /* slightly less jumpy than 1.15 */
+  z-index: 10;
+  transition: transform .12s ease, opacity .12s ease;
+}
+
+/* Make the image pop a bit while dragging */
+.icon.dragging .avatar-img{
+  box-shadow: 0 8px 22px rgba(0,0,0,.35),
+              inset 0 2px 0 rgba(255,255,255,.18),
+              inset 0 -3px 0 rgba(0,0,0,.5);
+}
+
+/* placeholder that reserves space while dragging */
+.icon.placeholder{
+  opacity: 0;            /* invisible but keeps layout */
+  pointer-events: none;
+}
+
+/* optional: show where it will drop (debug) */
+/*
+.icon.placeholder{ opacity:.25; outline:1px dashed rgba(255,255,255,.35); }
+*/
+
+
+/* Responsive tweaks for very small phones */
+@media (max-width: 420px){
+  .desktop-grid{
+    height: clamp(160px, 35vh, 260px);
+    padding: 20px 16px;
+    gap: 14px;
+  }
+}
+
+
+/* Avatar image */
+.avatar-img {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid #2b3a50;
+  box-shadow: inset 0 2px 0 rgba(255,255,255,.15),
+              inset 0 -3px 0 rgba(0,0,0,.45);
+  transition: transform .18s ease, box-shadow .2s ease, filter .2s ease;
+}
+
+/* Hover enlarge effect (desktop only) */
+@media (hover: hover) {
+  .avatar-img:hover,
+  .avatar-img:focus-visible {
+    transform: scale(2.0); /* bigger pop */
+    box-shadow: 0 10px 28px rgba(0,0,0,.45),
+                0 0 18px rgba(80,150,255,0.6);
+    filter: brightness(1.15) contrast(1.05);
+    transition: transform 0.25s ease, 
+                box-shadow 0.25s ease, 
+                filter 0.25s ease;
+  }
+}
+
+/* Phone tweaks */
+@media (max-width: 480px) {
+  .desktop-grid {
+    width: 92vw;
+    padding: 12px 14px;
+    gap: 12px;
+    flex-wrap: wrap;            /* allow wrapping */
+    justify-content: center;    /* keep icons centered */
+  }
+
+  .avatar-img {
+    width: 48px; 
+    height: 48px;
+  }
+
+  .label {
+    font-size: 11px;
+  }
+}
+
+/* Prevent sticky hover on touchscreens */
+@media (hover: none) {
+  .avatar-img:hover,
+  .avatar-img:focus-visible {
+    transform: none !important;
+    box-shadow: none !important;
+    filter: none !important;
+  }
+}
+
+
+/* Label */
+.label{ font-size:12px; text-align:center; color:#c9d8ff }
+
+/* === Menu screen (menu.php) === */
+body.menu-screen{
+  min-height:100dvh;
+  background: linear-gradient(#0a1015, #1a252f);
+  display:flex; justify-content:center; align-items:center; padding:24px;
+}
+.menu-panel{
+  background:#1a1f27;
+  border:4px solid #555; border-radius:12px;
+  box-shadow: 0 0 15px #000 inset, 0 0 25px rgba(0,0,0,.7);
+  padding: 18px; width: 92vw; max-width: 340px;
+}
+
+.menu-btn{
+  display:block; width:100%;
+  margin:10px 0; padding:14px;
+  font-size: clamp(14px, 4vw, 18px);
+  font-weight:700; color: gold;
+  text-shadow: 1px 1px 2px #000;
+  text-align:center; text-decoration:none;
+  background: linear-gradient(to bottom, #1d4ed8, #0a2472);
+  border:2px solid #333; border-radius:6px;
+  box-shadow: inset 0 2px 3px rgba(255,255,255,.2), inset 0 -2px 3px rgba(0,0,0,.6);
+  cursor:pointer; transition: transform .1s ease, box-shadow .2s ease, background .2s ease;
+}
+.menu-btn:hover{
+  background: linear-gradient(to bottom, #2563eb, #103198);
+  box-shadow: 0 0 12px #3b82f6, inset 0 2px 4px rgba(255,255,255,.25);
+}
+.menu-btn:active{ transform: scale(.98) }
+.menu-btn.quit{ margin-top:16px; }
+
+/* Small phones */
+@media (max-width: 420px){
+  .avatar-img{ width:48px; height:48px; border-radius:10px; }
+  .label{ font-size:11px; }
+  .menu-panel{ padding:14px; border-width:3px }
+  .menu-btn{ margin:8px 0; padding:12px }
+}
