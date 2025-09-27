@@ -23,10 +23,10 @@ if (!$bootedCookie && !$fromBoot) {
 
 
   <main class="desktop-grid" role="navigation" aria-label="Desktop icons">
-
-    <div class="icon">
+<!--menu icon -->
+<div class="icon">
       <a href="menu.php" data-sfx>
-        <img src="img/rd.jpg" alt="Kurt Profile" class="avatar-img" />
+        <img src="img/user.png" alt="Kurt Profile" class="avatar-img" />
       </a>
       <span class="label">Profile</span>
     </div>
@@ -34,11 +34,17 @@ if (!$bootedCookie && !$fromBoot) {
        <!-- Refresh icon -->
 <div class="icon">
   <a href="index.php" data-sfx>
-    <img src="img/refresh.png" alt="Refresh" class="avatar-img" />
+    <img src="img/yin.png" alt="Refresh" class="avatar-img" />
   </a>
   <span class="label">Refresh</span>
 </div>
 
+
+<!-- Music Icon -->
+<div class="icon">
+  <img src="img/silenced.png" alt="Music (Muted)" class="avatar-img" />
+  <span class="label">Music</span>
+</div>
 
 
 
@@ -50,6 +56,8 @@ if (!$bootedCookie && !$fromBoot) {
   <audio id="startup-sound" src="sfx/startup.mp3" preload="auto"></audio>
 
   <script src="js/main.js"></script>
+  
+  <script src="js/toggle.js"></script>
 
   <script>
     const params = new URLSearchParams(location.search);
@@ -75,14 +83,27 @@ if (!$bootedCookie && !$fromBoot) {
 <script src="js/hover-sound.js"></script>
 
 <!-- click sound -->
-<audio id="click-sound" src="sfx/click.mp3" preload="auto">
-  </audio>
-  <script src="js/click-sound.js"></script>
+<!-- click sound -->
+<audio id="click-sound" preload="auto">
+  <source src="sfx/click.ogg" type="audio/ogg">
+  <source src="sfx/click.mp3" type="audio/mpeg">
+</audio>
+<script src="js/click-sound.js"></script>
+
+
+
+
 
 <!-- bg -->
 <canvas id="snow-canvas"></canvas>
 <script src="js/snow.js"></script>
 <script src="js/transition.js"></script>
+<!-- background music player (managed by JS) -->
+<audio id="bgm" preload="auto"></audio>
+
+
+
+
 
 
 
