@@ -8,6 +8,11 @@ if (!$bootedCookie && !$fromBoot) {
   exit;
 }
 ?>
+
+<?php
+include 'bg.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,9 +30,10 @@ if (!$bootedCookie && !$fromBoot) {
   <main class="desktop-grid" role="navigation" aria-label="Desktop icons">
 <!--menu icon -->
 <div class="icon">
-      <a href="menu.php" data-sfx>
-        <img src="img/user.png" alt="Kurt Profile" class="avatar-img" />
-      </a>
+      <a href="menu.php" data-sfx data-sfx-offset="0" data-sfx-rate="1.0">
+  <img src="img/user.png" alt="Kurt Profile" class="avatar-img">
+</a>
+
       <span class="label">Profile</span>
     </div>
 
@@ -46,6 +52,14 @@ if (!$bootedCookie && !$fromBoot) {
   <span class="label">Music</span>
 </div>
 
+<!-- bg icon-->
+<!-- Theme icon -->
+<div class="icon" id="theme-toggle" data-sfx>
+  <img src="img/sun.png" alt="Theme: Day" class="avatar-img" />
+  <span class="label">Theme</span>
+</div>
+
+
 
 
 
@@ -53,7 +67,7 @@ if (!$bootedCookie && !$fromBoot) {
   </main>
 
   <!-- startup sound -->
-  <audio id="startup-sound" src="sfx/startup.mp3" preload="auto"></audio>
+  <audio id="startup-sound" src="sfx/jobs-done.mp3" preload="auto"></audio>
 
   <script src="js/main.js"></script>
   
@@ -78,15 +92,14 @@ if (!$bootedCookie && !$fromBoot) {
   </script>
 
   <!-- hover sound -->
-  <audio id="hover-sound" src="sfx/hover.ogg" preload="auto">
+  <audio id="hover-sound" src="sfx/pick.mp4" preload="auto">
   </audio>
 <script src="js/hover-sound.js"></script>
 
 <!-- click sound -->
 <!-- click sound -->
 <audio id="click-sound" preload="auto">
-  <source src="sfx/click.ogg" type="audio/ogg">
-  <source src="sfx/click.mp3" type="audio/mpeg">
+  <source src="sfx/jobs-done.mp3" type="audio/mpeg">
 </audio>
 <script src="js/click-sound.js"></script>
 
@@ -94,12 +107,7 @@ if (!$bootedCookie && !$fromBoot) {
 
 
 
-<!-- bg -->
-<canvas id="snow-canvas"></canvas>
-<script src="js/snow.js"></script>
-<script src="js/transition.js"></script>
-<!-- background music player (managed by JS) -->
-<audio id="bgm" preload="auto"></audio>
+
 
 
 

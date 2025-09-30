@@ -1,3 +1,8 @@
+<?php
+include 'bg.php';
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,8 +14,6 @@
 <body class="menu-screen">
   <div id="page-fader" aria-hidden="true"></div>
   <div class="wallpaper"></div>
-  <canvas id="snow-canvas"></canvas>
-
   <!-- Frozen Throne rafters (visual bar where chains attach) -->
   <!-- put this where your .menu-panel currently is in menu.php -->
 <div class="menu-hang">
@@ -21,30 +24,27 @@
 
   <!-- Panel held by chains -->
   <div class="menu-panel">
-
-    <a href="about.php" class="menu-btn" data-sfx>About Me</a>
-    <button class="menu-btn" data-sfx>Skills</button>
-    <button class="menu-btn" data-sfx>Projects</button>
-    <button class="menu-btn" data-sfx>Contact</button>
-    <a href="desktop.php" class="menu-btn quit" data-sfx>Quit</a>
-  </div>
+  <a href="about.php" class="menu-btn" data-sfx>About Me</a>
+  <a href="skills.php" class="menu-btn" data-sfx>Skills</a>
+  <a href="projects.php" class="menu-btn" data-sfx>Projects</a>
+  <a href="contact.php" class="menu-btn" data-sfx>Contact</a>
+  <a href="desktop.php" class="menu-btn quit" data-sfx>Quit</a>
 </div>
 
-
-
+</div>
 
   <!-- click sound -->
-  <audio id="click-sound" src="sfx/click.wav" preload="auto"></audio>
+  <audio id="click-sound" src="/sfx/jobs-done.mp3" preload="auto"></audio>
+<script src="/js/click-sound.js" defer></script>
 
-  <!-- background music (shared across pages) -->
-  <audio id="bgm" preload="auto"></audio>
 
   <!-- scripts -->
-  <script src="js/main.js"></script>
-  <script src="js/snow.js"></script>
-  <script src="js/transition.js"></script>
-  
+  <script src="js/main.js"></script>  
   <script src="js/toggle.js"></script>
+  <script src="js/click-sound.js"></script>
+
+
+
 
 
 </body>

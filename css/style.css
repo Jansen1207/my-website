@@ -11,20 +11,51 @@ body.desktop{
   padding:24px;
 }
 /* Base wallpaper */
-.wallpaper {
+/* Base wallpaper (fallback) */
+.wallpaper{
   position: fixed;
   inset: 0;
   pointer-events: none;
   z-index: -2;
-
-  /* Darker sunny-gray gradient */
-  background: linear-gradient(
-    180deg,
-    #e6dfb8 0%,   /* muted warm yellow (sunny but darker) */
-    #bfbba5 50%,  /* earthy beige-gray */
-    #8c8c8c 100%  /* solid darker gray base */
-  );
+  background: #0a0f16; /* neutral */
 }
+
+/* ☀️ Day (default) */
+body.theme-day .wallpaper{
+  background:
+    radial-gradient(circle at 30% 10%, rgba(255,255,255,.14) 0%, rgba(255,255,255,0) 28%),
+    linear-gradient(180deg, #e3e9f3 0%, #cdd8e8 40%, #a7b7cf 70%, #6c7a8f 100%);
+}
+
+/* 🌙 Night (Night Elf) */
+body.theme-moon .wallpaper{
+  background:
+    radial-gradient(circle at 70% 20%, rgba(180,120,255,.25) 0%, rgba(40,20,60,0) 25%),
+    linear-gradient(180deg, #1a0f2e 0%, #0c1a2b 40%, #0a131f 70%, #05080d 100%);
+}
+
+/* Default label style */
+.label {
+  font-size: 12px;
+  font-weight: 600;
+  display: block;
+  margin-top: 6px;
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+/* ☀️ Day theme = darker text */
+body.theme-day .label {
+  color: #111; /* black / dark gray */
+  text-shadow: 1px 1px 0 rgba(255,255,255,.4);
+}
+
+/* 🌙 Night theme = lighter text */
+body.theme-moon .label {
+  color: #f0f0f0; /* white / silver */
+  text-shadow: 1px 1px 2px #000;
+}
+
 
 
 
@@ -34,7 +65,7 @@ body.desktop{
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 186%;
   pointer-events: none;
   z-index: -1; /* above wallpaper, below icons */
 }

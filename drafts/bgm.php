@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <body>
-  <audio id="bgm" src="sfx/wc3music.mp3" preload="auto" loop></audio>
+  <audio id="bgm" src="sfx/tests.mp3" preload="auto" loop></audio>
 
   <script>
     const bgm = document.getElementById("bgm");

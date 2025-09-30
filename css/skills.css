@@ -1,0 +1,63 @@
+/* ---------- Skills page extras ---------- */
+
+
+/* Tag chips row */
+.skills-tags{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 10px 0 16px;
+}
+.chip{
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  color: #e8f0ff;
+  background: linear-gradient(180deg, #233149, #161f2f);
+  border: 1px solid rgba(255,255,255,.1);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.08), 0 1px 8px rgba(0,0,0,.35);
+}
+
+/* Grid of meters */
+.skills-grid{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.skill-item{ display: grid; gap: 6px; }
+.skill-label{
+  font-size: 13px;
+  color: #cbd6ef;
+  text-shadow: 0 1px 0 rgba(0,0,0,.6);
+}
+
+/* Warcraft-ish meter */
+.meter{
+  position: relative;
+  height: 12px;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #0e1420, #090d14);
+  border: 1px solid #2a3546;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,.55);
+  overflow: hidden;
+}
+.meter span{
+  position: absolute; left:0; top:0; bottom:0;
+  width: 0%;
+  border-radius: 10px;
+  background:
+    linear-gradient(180deg, #3aa0ff, #1e5bd1),
+    repeating-linear-gradient(90deg, rgba(255,255,255,.12) 0 4px, rgba(255,255,255,0) 4px 8px);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.25), 0 0 10px rgba(59,130,246,.45);
+  transition: width .8s ease; /* fills when visible */
+}
+
+/* CTA row */
+.skills-cta{
+   margin-top: 16px;
+  border-color: #600;
+  background: linear-gradient(to bottom, #7a1a1a, #3d0c0c);
+  text-decoration: none;
+}
+
