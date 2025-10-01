@@ -1,3 +1,5 @@
+
+
 <?php
 // allow if: came from loader (?boot=1) OR we have the booted cookie
 $bootedCookie = isset($_COOKIE['booted']) && $_COOKIE['booted'] === '1';
