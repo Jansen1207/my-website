@@ -17,5 +17,11 @@
   </main>
 
   <script src="js/boot.js"></script>
+  <?php
+  echo "test";
+
+  ?>
+
+
 </body>
 </html>
