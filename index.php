@@ -1,7 +1,3 @@
-<?php
-phpinfo();
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,7 +15,7 @@ phpinfo();
     </div>
     <p class="hint">Loading…</p>
   </main>
-oiasjdoaisjdoiajsd
+
   <script src="js/boot.js"></script>
 </body>
 </html>
