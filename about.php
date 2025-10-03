@@ -15,11 +15,9 @@ include 'bg.php';
 <body class="about-screen">
   <div id="page-fader" aria-hidden="true"></div>
   
-
-  <div class="menu-hang">
-  <!-- Chains -->
-  <div class="chain-big left"></div>
-  <div class="chain-big right"></div>
+<?php
+include 'chain.php';
+?>
 
   <!-- About Panel -->
   <div class="about-panel">

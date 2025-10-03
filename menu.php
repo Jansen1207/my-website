@@ -2,7 +2,6 @@
 include 'bg.php';
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,11 +15,10 @@ include 'bg.php';
   <div class="wallpaper"></div>
   <!-- Frozen Throne rafters (visual bar where chains attach) -->
   <!-- put this where your .menu-panel currently is in menu.php -->
-<div class="menu-hang">
-  <!-- Left Chain -->
-  <div class="chain-big left"></div>
-  <!-- Right Chain -->
-  <div class="chain-big right"></div>
+
+<?php
+include 'chain.php';
+?>
 
   <!-- Panel held by chains -->
   <div class="menu-panel">
@@ -28,7 +26,7 @@ include 'bg.php';
   <a href="skills.php" class="menu-btn" data-sfx>Skills</a>
   <a href="projects.php" class="menu-btn" data-sfx>Projects</a>
   <a href="contact.php" class="menu-btn" data-sfx>Contact</a>
-  <a href="desktop.php" class="menu-btn quit" data-sfx>Quit</a>
+  <a href="index.php" class="menu-btn quit" data-sfx>Quit</a>
 </div>
 
 </div>

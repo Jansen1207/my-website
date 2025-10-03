@@ -16,11 +16,10 @@ include 'bg.php';
   <div id="page-fader" aria-hidden="true"></div>
 
 
-  <!-- hanging group: chains + panel -->
-  <div class="menu-hang">
-    <div class="chain-big left" aria-hidden="true"></div>
-    <div class="chain-big right" aria-hidden="true"></div>
 
+<?php
+include 'chain.php';
+?>
     <section class="menu-panel about-panel">
       <h1 class="about-title">Skills</h1>
 

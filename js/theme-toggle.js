@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const a = e.target.closest('a[href]');
     if (!a) return;
     const href = a.getAttribute("href") || "";
-    if (/(^|\/)index\.php(\?|$)/.test(href)) {
+    if (/(^|\/)ref\.php(\?|$)/.test(href)) {
       // Reset theme
       applyTheme("day");
     }

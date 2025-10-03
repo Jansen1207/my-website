@@ -1,10 +1,10 @@
 // js/toggle.js
 document.addEventListener("DOMContentLoaded", () => {
-  // <audio id="bgm"> MUST exist in the page (desktop.php, menu.php, about.php, etc.)
+  // <audio id="bgm"> MUST exist in the page (index.php, menu.php, about.php, etc.)
   const bgm = document.getElementById("bgm");
   if (!bgm) return;
 
-  // Optional Music icon (exists on desktop.php; may not exist on every page)
+  // Optional Music icon (exists on index.php; may not exist on every page)
   const musicImg  = document.querySelector('.icon img.avatar-img[alt^="Music"]');
   const musicIcon = musicImg ? musicImg.closest(".icon") : null;
 
@@ -121,7 +121,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!a) return;
     const href = a.getAttribute("href") || "";
     // match index.php (with or without query)
-    if (/(^|\/)index\.php(\?|$)/.test(href)) {
+    if (/(^|\/)ref\.php(\?|$)/.test(href)) {
       isMuted = true;
       localStorage.setItem("bgm_muted", "true");
       saveTime();

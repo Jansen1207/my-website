@@ -1,0 +1,152 @@
+✅ 1. QUICK SELF-INTRO (Use 4 bullets)
+
+Fresh BSIT graduate from JRU
+
+Focused on PHP, Laravel, MySQL, HTML/CSS/JS
+
+Built backend + APIs in capstone project (APHOA)
+
+Used GitHub for version control and collaboration
+
+✅ 2. “WHY BACKEND?”
+
+Enjoy working with database & logic
+
+Comfortable with APIs, authentication, validation
+
+Experience in Laravel + MySQL
+
+Can work with native PHP or frameworks
+
+✅ 3. “CAN YOU CREATE APIs?”
+
+Just mention 4 steps:
+
+Routes
+“I start by defining the route — for example in api.php.”
+
+Route::post('/login', [AuthController::class, 'login']);
+
+Controller functions
+“Then I create the controller method that handles the request.”
+
+public function login(Request $request) {
+    // logic here
+}
+
+Validation
+“I validate the data, either directly or using a FormRequest.”
+$request->validate([
+  'email' => 'required|email',
+  'password' => 'required'
+]);
+
+JSON response
+“I return a JSON response with proper status codes.”
+
+return response()->json(['message' => 'Login success'], 200);
+(+ say you test using Postman)
+
+✅ 4. “HOW DO YOU INTEGRATE OTHER APIs?”
+
+Use Guzzle / cURL / Http client
+
+Store keys in .env
+
+Read JSON and handle errors
+
+Can connect internal OR third-party
+
+✅ 5. “DATABASE & BUSINESS LOGIC”
+
+Create tables & migrations
+
+Use models + relationships
+
+Add validation and rules
+
+Prevent wrong or duplicate data
+
+✅ 6. “MEETINGS & PRODUCT OWNER TALKS”
+
+Listen to requirements
+
+Ask clarifying questions
+
+Confirm expected output
+
+Take notes and give suggestions
+
+✅ 7. “LEARNING THE CODEBASE”
+
+Explore routes, models, controllers
+
+Run locally & test APIs
+
+Start with small fixes
+
+Read existing code patterns
+
+✅ 8. “INNOVATION PROJECTS”
+
+Open to new tools or features
+
+Suggest improvements
+
+Help automate or upgrade code
+
+Support digital transformation
+
+✅ 9. ENDING STATEMENT (if needed)
+
+Willing to learn fast
+
+Comfortable with teams + hybrid setup
+
+Excited to contribute to backend development
+
+Open to working on both existing and new systems
+
+----------------
+
+✅ Self-Introduction
+
+I’m Kurt Jansen Dullon, a BSIT graduate
+
+Focused on backend development, databases, and web technologies
+
+✅ Backend Experience – APHOA Capstone Project
+
+Led the backend development of the APHOA web system
+
+Used native PHP (no framework) to build strong fundamentals
+
+Developed using XAMPP and Sublime Text
+
+Designed and managed the MySQL database using phpMyAdmin
+
+Built a role-based login system with:
+
+Member dashboard
+
+Officer dashboard
+
+Admin dashboard
+
+The client wanted a faster payment process, so we added an online payment feature using a GCash QR code (not API-based)
+
+✅ Technical Skills
+
+Backend: Native PHP
+
+Frontend: HTML, CSS, JavaScript
+
+Database: MySQL + phpMyAdmin
+
+Currently learning: Laravel for backend development
+
+✅ Personal Projects & Hosting
+
+Developing and improving my portfolio website using PHP, HTML, CSS, and JavaScript
+
+Hosted on Z.com with the domain: kurtjansendullon.com
