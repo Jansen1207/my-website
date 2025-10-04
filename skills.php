@@ -81,7 +81,7 @@ include 'chain.php';
 
       <!-- CTA row -->
       <div class="skills-cta">
-        <a href="menu.php" class="menu-btn quit" data-sfx>Back to Menu</a>
+        <a href="index.php?page=menu" class="menu-btn quit" data-sfx>Back to Menu</a>
       </div>
     </section>
   </div>

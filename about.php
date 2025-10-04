@@ -43,7 +43,7 @@ include 'chain.php';
   upgrading my keyboard, unlocking my potential, and maybe buying coffee with my own money 😂
 </p>
 
-    <a href="menu.php" class="menu-btn quit">Back to Menu</a>
+    <a href="index.php?page=menu" class="menu-btn quit">Back to Menu</a>
   </div>
 </div>
 

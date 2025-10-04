@@ -121,7 +121,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!a) return;
     const href = a.getAttribute("href") || "";
     // match index.php (with or without query)
-    if (/(^|\/)ref\.php(\?|$)/.test(href)) {
+    if (/index\.php(\?.*)?\bpage=ref\b/.test(href)) {
       isMuted = true;
       localStorage.setItem("bgm_muted", "true");
       saveTime();

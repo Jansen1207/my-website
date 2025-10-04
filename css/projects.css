@@ -1,0 +1,92 @@
+/* === Projects Screen === */
+body.projects-screen {
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  background: #0a0f16;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.projects-panel {
+  background: #161b22; /* match about */
+  border: 1px solid #2a2f36;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.35);
+  padding: 24px;
+  width: 100%;
+  max-width: 620px;
+  text-align: left;
+  color: #e6e6e6;
+}
+
+.projects-title {
+  font-size: clamp(1.5rem, 1rem + 2vw, 2.2rem);
+  color: #ffd76a;
+  text-shadow: 0 1px 2px rgba(0,0,0,.4);
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 700;
+}
+
+/* Project List Styling */
+.project-item {
+  background: rgba(255, 215, 0, 0.06); /* subtle Warcraft accent */
+  padding: 14px 16px;
+  border-left: 3px solid #ffd76a;
+  border-radius: 10px;
+  margin-bottom: 14px;
+}
+
+.project-name {
+  font-weight: 700;
+  color: #ffd76a;
+  font-size: 1.1rem;
+  margin: 0 0 4px;
+}
+
+.project-desc {
+  font-size: 0.95rem;
+  color: #d8dee9;
+  margin: 0 0 6px;
+}
+
+.project-link {
+  font-size: 0.9rem;
+  color: #4da3ff;
+  text-decoration: none;
+}
+
+.project-link:hover {
+  text-decoration: underline;
+}
+
+/* Back Button */
+.menu-btn.quit {
+  display: block;
+  margin-top: 18px;
+  text-align: center;
+}
+
+/* Responsive scaling exactly like About page */
+@media (min-width: 640px) {
+  .projects-panel {
+    padding: 28px;
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 960px) {
+  .projects-panel {
+    padding: 32px;
+    max-width: 860px;
+  }
+}
+
+@media (max-width: 360px) {
+  body.projects-screen { padding: 16px; }
+  .projects-panel { padding: 18px; }
+}

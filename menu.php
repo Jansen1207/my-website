@@ -1,3 +1,5 @@
+
+
 <?php
 include 'bg.php';
 ?>
@@ -22,10 +24,10 @@ include 'chain.php';
 
   <!-- Panel held by chains -->
   <div class="menu-panel">
-  <a href="about.php" class="menu-btn" data-sfx>About Me</a>
-  <a href="skills.php" class="menu-btn" data-sfx>Skills</a>
-  <a href="projects.php" class="menu-btn" data-sfx>Projects</a>
-  <a href="contact.php" class="menu-btn" data-sfx>Contact</a>
+  <a href="index.php?page=about" class="menu-btn" data-sfx>About Me</a>
+  <a href="index.php?page=skills" class="menu-btn" data-sfx>Skills</a>
+  <a href="index.php?page=projects" class="menu-btn" data-sfx>Projects</a>
+  <a href="index.php?page=contact" class="menu-btn" data-sfx>Contact</a>
   <a href="index.php" class="menu-btn quit" data-sfx>Quit</a>
 </div>
 

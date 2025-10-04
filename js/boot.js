@@ -19,5 +19,5 @@ setTimeout(() => {
   sessionStorage.setItem('booted', 'true');
 
   // Redirect to desktop with boot flag
-  window.location.href = 'index.php?boot=1';
+  window.location.href = 'index.php';
 }, delay);
